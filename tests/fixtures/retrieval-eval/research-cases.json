@@ -1,0 +1,183 @@
+[
+  {
+    "id": "native-package-dependencies",
+    "query": "no external package dependencies",
+    "match": "phrase",
+    "expected": [
+      {
+        "path": "docs/research/native-retrieval-2026-10-04.md",
+        "quote": "declares no external package dependencies and pins Bun 1.4.2 for development."
+      }
+    ],
+    "kind": "phrase",
+    "notes": "Find the native runtime baseline without requiring qmd or Graphify. This is a partial manual evidence label, not an exhaustive list of relevant research notes."
+  },
+  {
+    "id": "bun-scanner-type-only-limit",
+    "query": "Transpiler scan type",
+    "match": "all",
+    "expected": [
+      {
+        "path": "docs/research/memory-rag-kb-repomap-2026-10-04.md",
+        "quote": "Bun's `Transpiler.scan()` exposes imports and export names but ignores type-only records"
+      }
+    ],
+    "kind": "identifier",
+    "notes": "Retrieve the Bun scanner's coverage caveat, rather than a general parser recommendation. The note predates implementation; this label checks historical source evidence, not current scanner acceptance."
+  },
+  {
+    "id": "sqlite-consistent-backup",
+    "query": "VACUUM INTO",
+    "match": "phrase",
+    "expected": [
+      {
+        "path": "docs/research/memory-rag-kb-repomap-2026-10-04.md",
+        "quote": "SQLite offers online backup and `VACUUM INTO` for consistent live database copies"
+      }
+    ],
+    "kind": "identifier",
+    "notes": "Find the named SQLite backup mechanism and its consistency purpose. This historical recommendation does not itself prove which backup implementation is now shipped."
+  },
+  {
+    "id": "accepted-memory-lifecycle",
+    "query": "accepted memories forget correct",
+    "match": "all",
+    "expected": [
+      {
+        "path": "docs/research/platform-landscape-2026-10-02.md",
+        "quote": "keep immutable or revisioned session/source records separate from accepted memories"
+      }
+    ],
+    "kind": "identifier",
+    "notes": "Find the memory admission/lifecycle distinction in the earlier platform survey. Relevance labels are partial; another note may also support this question."
+  },
+  {
+    "id": "aider-repository-context",
+    "query": "Aider important definitions signatures",
+    "match": "all",
+    "expected": [
+      {
+        "path": "docs/research/memory-rag-kb-repomap-2026-10-04.md",
+        "quote": "Aider's repository map exposes selected files and important definitions/signatures"
+      }
+    ],
+    "kind": "identifier",
+    "notes": "Locate the structural context that distinguishes a repository map from ordinary source-text indexing. The label is about the cited design reference, not claimed Tomeowl feature parity."
+  },
+  {
+    "id": "qmd-value-and-offline-preparation",
+    "query": "qmd native search offline preparation",
+    "match": "any",
+    "expected": [
+      {
+        "path": "docs/research/native-retrieval-2026-10-04.md",
+        "quote": "qmd combines lexical search with optional model-assisted retrieval paths including vectors, query expansion, and reranking."
+      },
+      {
+        "path": "docs/research/cli-portability-2026-10-04.md",
+        "quote": "qmd's model-assisted paths use local GGUF models downloaded on first use"
+      }
+    ],
+    "kind": "multi-source",
+    "notes": "The selected evidence covers both what the optional tool adds and why offline deployment needs model staging. Both labeled sources matter; labels are not exhaustive and were chosen without querying the retriever."
+  },
+  {
+    "id": "shared-citation-graph-meaning",
+    "query": "shared citation evidence",
+    "match": "phrase",
+    "expected": [
+      {
+        "path": "docs/research/workspace-projection-2026-10-03.md",
+        "quote": "that connection is shared citation evidence, not semantic similarity."
+      }
+    ],
+    "kind": "phrase",
+    "notes": "Retrieve the reason two local literature-shaped notes connect in the sample graph. This passage does not establish agreement between the cited publications."
+  },
+  {
+    "id": "e5-prefix-contract",
+    "query": "multilingual-e5-small prefixes",
+    "match": "all",
+    "expected": [
+      {
+        "path": "docs/research/backend-options-2026-10-02.md",
+        "quote": "inputs must use `query: ` or `passage: ` prefixes, including non-English text."
+      }
+    ],
+    "kind": "identifier",
+    "notes": "Find the preprocessing requirement for the named optional multilingual model. A retrieved model-card summary is not a benchmark or evidence that this model is installed."
+  },
+  {
+    "id": "measurement-decimal-scaling",
+    "query": "decimal scaling",
+    "match": "phrase",
+    "expected": [
+      {
+        "path": "docs/research/engineering-evidence-platform-2026-10-03.md",
+        "quote": "Limits, units, decimal scaling, and test conditions must survive transformations."
+      }
+    ],
+    "kind": "phrase",
+    "notes": "Locate the numerical fidelity requirement relevant to measurement/STDF work. This research requirement is distinct from delivered measurement analytics."
+  },
+  {
+    "id": "openjev-windows-training-boundary",
+    "query": "OpenJev MLX Windows",
+    "match": "all",
+    "expected": [
+      {
+        "path": "docs/research/recent-practice-2026-10-02.md",
+        "quote": "documents PyTorch Windows/Linux scoring and Gemma 3 4B; feature/head training remains tied to MLX"
+      }
+    ],
+    "kind": "identifier",
+    "notes": "Find the historical Windows scoring versus training-platform distinction for a proposed optional classifier reference. This annotation does not reverify upstream facts beyond the note's checked date."
+  },
+  {
+    "id": "uncalibrated-model-scores",
+    "query": "calibrated confidence",
+    "match": "phrase",
+    "expected": [
+      {
+        "path": "docs/research/backend-options-2026-10-02.md",
+        "quote": "Do not label raw next-token likelihoods as calibrated confidence."
+      }
+    ],
+    "kind": "phrase",
+    "notes": "Retrieve a precise limitation on how model scores should be presented. Other passages discuss calibration, but this is the manually selected direct support anchor."
+  },
+  {
+    "id": "paraphrase-chat-archive-admission",
+    "query": "remember durable preferences without treating every chat log as accepted knowledge",
+    "match": "any",
+    "expected": [
+      {
+        "path": "docs/research/memory-rag-kb-repomap-2026-10-04.md",
+        "quote": "an indexed transcript is an archive, while a durable preference or decision needs an intentional lifecycle and recall policy."
+      }
+    ],
+    "kind": "paraphrase",
+    "notes": "Natural vocabulary differs from the source's transcript/archive wording while retaining some topic words. This is a vocabulary-shift case, not proof of purely semantic retrieval."
+  },
+  {
+    "id": "paraphrase-move-library-identities",
+    "query": "moving my evidence library to another computer without changing document identities",
+    "match": "any",
+    "expected": [
+      {
+        "path": "docs/research/engineering-evidence-platform-2026-10-03.md",
+        "quote": "A source should receive a workspace-stable identity independent of its current absolute path."
+      }
+    ],
+    "kind": "paraphrase",
+    "notes": "Natural vocabulary differs from the source's workspace identity and absolute-path wording. This labels historical portability rationale, not completion of catalog migration."
+  },
+  {
+    "id": "unanswerable-calibration-record",
+    "query": "SN-UNSEEN-8472 calibration offset",
+    "match": "all",
+    "expected": [],
+    "kind": "unanswerable",
+    "notes": "The inspected research corpus contains no calibration record for this invented tester serial. Empty expected evidence applies only to this checked corpus; retrieval emptiness is not a generated-answer abstention guarantee."
+  }
+]

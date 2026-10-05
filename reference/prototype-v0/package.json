@@ -1,0 +1,13 @@
+{
+  "name": "tomeowl-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun src/cli.ts",
+    "build": "bun build src/cli.ts --compile --target=bun-windows-x64 --outfile dist/tomeowl.exe",
+    "demo": "bun src/cli.ts demo",
+    "check": "bun scripts/check.ts"
+  },
+  "engines": { "bun": "1.4.2" }
+}

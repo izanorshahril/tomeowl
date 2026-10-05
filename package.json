@@ -1,0 +1,23 @@
+{
+  "name": "tomeowl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun src/viewer/build.ts && bun src/cli.ts",
+    "build": "bun src/viewer/build.ts && bun build src/cli.ts --compile --target=bun-windows-x64 --outfile dist/tomeowl.exe",
+    "viewer:build": "bun src/viewer/build.ts",
+    "test": "bun src/viewer/build.ts && bun test ./tests",
+    "check": "bun src/viewer/build.ts && bun test ./tests",
+    "sample:workspace": "bun scripts/workspace-sample.ts",
+    "sample:videos": "bun src/viewer/build.ts && bun scripts/viberaven-sample.ts",
+    "snapshot:export": "bun src/viewer/build.ts && bun scripts/export-snapshot.ts",
+    "prototype:ui": "bun scripts/design-prototype.ts",
+    "preview:workspace": "bun src/viewer/build.ts && bun scripts/preview-workspace.ts",
+    "eval:retrieval": "bun scripts/evaluate-retrieval.ts",
+    "bench:retrieval": "bun scripts/benchmark-retrieval.ts",
+    "bench:graphify": "bun scripts/benchmark-graphify.ts",
+    "bench:visual": "bun scripts/benchmark-visual.ts"
+  },
+  "engines": { "bun": "1.4.2" }
+}

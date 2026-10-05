@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    { "id": "tomeowl.research", "name": "research", "root": "../docs/research" },
+    { "id": "tomeowl.code", "name": "code", "root": "../src" }
+  ]
+}

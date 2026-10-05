@@ -1,0 +1,8 @@
+dist/
+data/
+src/viewer/browser.bundle.js
+node_modules/
+.impeccable/review/
+reference/prototype-v0/dist/
+reference/prototype-v0/prototype-data/
+reference/prototype-v0/.qmd/

@@ -1,0 +1,6 @@
+dist/
+prototype-data/
+node_modules/
+.qmd/
+*.sqlite-wal
+*.sqlite-shm

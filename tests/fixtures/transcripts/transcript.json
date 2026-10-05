@@ -1,0 +1,9 @@
+{
+  "video_id": "fixture",
+  "title": "Calibration walkthrough",
+  "is_generated": true,
+  "snippets": [
+    { "start": 0, "end": 2, "duration": 2, "text": "The scheduler uses a calibration run identifier." },
+    { "start": 2, "end": 5, "duration": 3, "text": "TMEASURE_42 is retained in the local report." }
+  ]
+}

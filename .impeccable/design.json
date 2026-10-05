@@ -1,0 +1,808 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T16:26:25.215Z",
+  "title": "Design System: Tomeowl",
+  "extensions": {
+    "colorMeta": {
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Charcoal Canvas",
+        "tonalRamp": [
+          "oklch(15% 0.0037 164.66)",
+          "oklch(26% 0.0037 164.66)",
+          "oklch(38% 0.0037 164.66)",
+          "oklch(49% 0.0037 164.66)",
+          "oklch(61% 0.0037 164.66)",
+          "oklch(72% 0.0037 164.66)",
+          "oklch(84% 0.0037 164.66)",
+          "oklch(95% 0.0037 164.66)"
+        ]
+      },
+      "chrome": {
+        "role": "neutral",
+        "displayName": "Charcoal Chrome",
+        "tonalRamp": [
+          "oklch(15% 0.0059 156.71)",
+          "oklch(26% 0.0059 156.71)",
+          "oklch(38% 0.0059 156.71)",
+          "oklch(49% 0.0059 156.71)",
+          "oklch(61% 0.0059 156.71)",
+          "oklch(72% 0.0059 156.71)",
+          "oklch(84% 0.0059 156.71)",
+          "oklch(95% 0.0059 156.71)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Raised Charcoal",
+        "tonalRamp": [
+          "oklch(15% 0.0059 156.74)",
+          "oklch(26% 0.0059 156.74)",
+          "oklch(38% 0.0059 156.74)",
+          "oklch(49% 0.0059 156.74)",
+          "oklch(61% 0.0059 156.74)",
+          "oklch(72% 0.0059 156.74)",
+          "oklch(84% 0.0059 156.74)",
+          "oklch(95% 0.0059 156.74)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Inset Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0093 145.31)",
+          "oklch(26% 0.0093 145.31)",
+          "oklch(38% 0.0093 145.31)",
+          "oklch(49% 0.0093 145.31)",
+          "oklch(61% 0.0093 145.31)",
+          "oklch(72% 0.0093 145.31)",
+          "oklch(84% 0.0093 145.31)",
+          "oklch(95% 0.0093 145.31)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Quiet Border",
+        "tonalRamp": [
+          "oklch(15% 0.0140 149.47)",
+          "oklch(26% 0.0140 149.47)",
+          "oklch(38% 0.0140 149.47)",
+          "oklch(49% 0.0140 149.47)",
+          "oklch(61% 0.0140 149.47)",
+          "oklch(72% 0.0140 149.47)",
+          "oklch(84% 0.0140 149.47)",
+          "oklch(95% 0.0140 149.47)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Warm Reading Text",
+        "tonalRamp": [
+          "oklch(15% 0.0107 112.37)",
+          "oklch(26% 0.0107 112.37)",
+          "oklch(38% 0.0107 112.37)",
+          "oklch(49% 0.0107 112.37)",
+          "oklch(61% 0.0107 112.37)",
+          "oklch(72% 0.0107 112.37)",
+          "oklch(84% 0.0107 112.37)",
+          "oklch(95% 0.0107 112.37)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Supporting Sage Gray",
+        "tonalRamp": [
+          "oklch(15% 0.0156 142.21)",
+          "oklch(26% 0.0156 142.21)",
+          "oklch(38% 0.0156 142.21)",
+          "oklch(49% 0.0156 142.21)",
+          "oklch(61% 0.0156 142.21)",
+          "oklch(72% 0.0156 142.21)",
+          "oklch(84% 0.0156 142.21)",
+          "oklch(95% 0.0156 142.21)"
+        ]
+      },
+      "quiet": {
+        "role": "neutral",
+        "displayName": "Peripheral Sage Gray",
+        "tonalRamp": [
+          "oklch(15% 0.0169 145.37)",
+          "oklch(26% 0.0169 145.37)",
+          "oklch(38% 0.0169 145.37)",
+          "oklch(49% 0.0169 145.37)",
+          "oklch(61% 0.0169 145.37)",
+          "oklch(72% 0.0169 145.37)",
+          "oklch(84% 0.0169 145.37)",
+          "oklch(95% 0.0169 145.37)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Warm Orange",
+        "tonalRamp": [
+          "oklch(15% 0.0971 59.11)",
+          "oklch(26% 0.0971 59.11)",
+          "oklch(38% 0.0971 59.11)",
+          "oklch(49% 0.0971 59.11)",
+          "oklch(61% 0.0971 59.11)",
+          "oklch(72% 0.0971 59.11)",
+          "oklch(84% 0.0971 59.11)",
+          "oklch(95% 0.0971 59.11)"
+        ]
+      },
+      "selected": {
+        "role": "neutral",
+        "displayName": "Warm Selected Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0193 63.62)",
+          "oklch(26% 0.0193 63.62)",
+          "oklch(38% 0.0193 63.62)",
+          "oklch(49% 0.0193 63.62)",
+          "oklch(61% 0.0193 63.62)",
+          "oklch(72% 0.0193 63.62)",
+          "oklch(84% 0.0193 63.62)",
+          "oklch(95% 0.0193 63.62)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Evidence Mint",
+        "tonalRamp": [
+          "oklch(15% 0.0502 171.67)",
+          "oklch(26% 0.0502 171.67)",
+          "oklch(38% 0.0502 171.67)",
+          "oklch(49% 0.0502 171.67)",
+          "oklch(61% 0.0502 171.67)",
+          "oklch(72% 0.0502 171.67)",
+          "oklch(84% 0.0502 171.67)",
+          "oklch(95% 0.0502 171.67)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus Peach",
+        "tonalRamp": [
+          "oklch(15% 0.0944 57.53)",
+          "oklch(26% 0.0944 57.53)",
+          "oklch(38% 0.0944 57.53)",
+          "oklch(49% 0.0944 57.53)",
+          "oklch(61% 0.0944 57.53)",
+          "oklch(72% 0.0944 57.53)",
+          "oklch(84% 0.0944 57.53)",
+          "oklch(95% 0.0944 57.53)"
+        ]
+      },
+      "group-lavender": {
+        "role": "secondary",
+        "displayName": "Atlas Group Lavender",
+        "tonalRamp": [
+          "oklch(15% 0.0811 300.90)",
+          "oklch(26% 0.0811 300.90)",
+          "oklch(38% 0.0811 300.90)",
+          "oklch(49% 0.0811 300.90)",
+          "oklch(61% 0.0811 300.90)",
+          "oklch(72% 0.0811 300.90)",
+          "oklch(84% 0.0811 300.90)",
+          "oklch(95% 0.0811 300.90)"
+        ]
+      },
+      "group-sky": {
+        "role": "secondary",
+        "displayName": "Atlas Group Sky",
+        "tonalRamp": [
+          "oklch(15% 0.0675 230.85)",
+          "oklch(26% 0.0675 230.85)",
+          "oklch(38% 0.0675 230.85)",
+          "oklch(49% 0.0675 230.85)",
+          "oklch(61% 0.0675 230.85)",
+          "oklch(72% 0.0675 230.85)",
+          "oklch(84% 0.0675 230.85)",
+          "oklch(95% 0.0675 230.85)"
+        ]
+      },
+      "group-sand": {
+        "role": "secondary",
+        "displayName": "Atlas Group Sand",
+        "tonalRamp": [
+          "oklch(15% 0.0750 78.53)",
+          "oklch(26% 0.0750 78.53)",
+          "oklch(38% 0.0750 78.53)",
+          "oklch(49% 0.0750 78.53)",
+          "oklch(61% 0.0750 78.53)",
+          "oklch(72% 0.0750 78.53)",
+          "oklch(84% 0.0750 78.53)",
+          "oklch(95% 0.0750 78.53)"
+        ]
+      },
+      "group-rose": {
+        "role": "secondary",
+        "displayName": "Atlas Group Rose",
+        "tonalRamp": [
+          "oklch(15% 0.0623 357.63)",
+          "oklch(26% 0.0623 357.63)",
+          "oklch(38% 0.0623 357.63)",
+          "oklch(49% 0.0623 357.63)",
+          "oklch(61% 0.0623 357.63)",
+          "oklch(72% 0.0623 357.63)",
+          "oklch(84% 0.0623 357.63)",
+          "oklch(95% 0.0623 357.63)"
+        ]
+      },
+      "group-blue": {
+        "role": "secondary",
+        "displayName": "Atlas Group Blue",
+        "tonalRamp": [
+          "oklch(15% 0.0507 247.53)",
+          "oklch(26% 0.0507 247.53)",
+          "oklch(38% 0.0507 247.53)",
+          "oklch(49% 0.0507 247.53)",
+          "oklch(61% 0.0507 247.53)",
+          "oklch(72% 0.0507 247.53)",
+          "oklch(84% 0.0507 247.53)",
+          "oklch(95% 0.0507 247.53)"
+        ]
+      },
+      "group-sage": {
+        "role": "secondary",
+        "displayName": "Atlas Group Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0768 117.01)",
+          "oklch(26% 0.0768 117.01)",
+          "oklch(38% 0.0768 117.01)",
+          "oklch(49% 0.0768 117.01)",
+          "oklch(61% 0.0768 117.01)",
+          "oklch(72% 0.0768 117.01)",
+          "oklch(84% 0.0768 117.01)",
+          "oklch(95% 0.0768 117.01)"
+        ]
+      },
+      "contrast-canvas": {
+        "role": "neutral",
+        "displayName": "Contrast Canvas",
+        "tonalRamp": [
+          "oklch(15% 0.0027 145.44)",
+          "oklch(26% 0.0027 145.44)",
+          "oklch(38% 0.0027 145.44)",
+          "oklch(49% 0.0027 145.44)",
+          "oklch(61% 0.0027 145.44)",
+          "oklch(72% 0.0027 145.44)",
+          "oklch(84% 0.0027 145.44)",
+          "oklch(95% 0.0027 145.44)"
+        ]
+      },
+      "contrast-chrome": {
+        "role": "neutral",
+        "displayName": "Contrast Chrome",
+        "tonalRamp": [
+          "oklch(15% 0.0077 145.25)",
+          "oklch(26% 0.0077 145.25)",
+          "oklch(38% 0.0077 145.25)",
+          "oklch(49% 0.0077 145.25)",
+          "oklch(61% 0.0077 145.25)",
+          "oklch(72% 0.0077 145.25)",
+          "oklch(84% 0.0077 145.25)",
+          "oklch(95% 0.0077 145.25)"
+        ]
+      },
+      "contrast-muted": {
+        "role": "neutral",
+        "displayName": "Contrast Supporting Text",
+        "tonalRamp": [
+          "oklch(15% 0.0116 141.26)",
+          "oklch(26% 0.0116 141.26)",
+          "oklch(38% 0.0116 141.26)",
+          "oklch(49% 0.0116 141.26)",
+          "oklch(61% 0.0116 141.26)",
+          "oklch(72% 0.0116 141.26)",
+          "oklch(84% 0.0116 141.26)",
+          "oklch(95% 0.0116 141.26)"
+        ]
+      },
+      "contrast-line": {
+        "role": "neutral",
+        "displayName": "Contrast Border",
+        "tonalRamp": [
+          "oklch(15% 0.0174 145.34)",
+          "oklch(26% 0.0174 145.34)",
+          "oklch(38% 0.0174 145.34)",
+          "oklch(49% 0.0174 145.34)",
+          "oklch(61% 0.0174 145.34)",
+          "oklch(72% 0.0174 145.34)",
+          "oklch(84% 0.0174 145.34)",
+          "oklch(95% 0.0174 145.34)"
+        ]
+      },
+      "role-project": {
+        "role": "secondary",
+        "displayName": "Project Sand",
+        "tonalRamp": [
+          "oklch(15% 0.0806 78.75)",
+          "oklch(26% 0.0806 78.75)",
+          "oklch(38% 0.0806 78.75)",
+          "oklch(49% 0.0806 78.75)",
+          "oklch(61% 0.0806 78.75)",
+          "oklch(72% 0.0806 78.75)",
+          "oklch(84% 0.0806 78.75)",
+          "oklch(95% 0.0806 78.75)"
+        ]
+      },
+      "role-guidance": {
+        "role": "secondary",
+        "displayName": "Main Document Orange",
+        "tonalRamp": [
+          "oklch(15% 0.1059 62.50)",
+          "oklch(26% 0.1059 62.50)",
+          "oklch(38% 0.1059 62.50)",
+          "oklch(49% 0.1059 62.50)",
+          "oklch(61% 0.1059 62.50)",
+          "oklch(72% 0.1059 62.50)",
+          "oklch(84% 0.1059 62.50)",
+          "oklch(95% 0.1059 62.50)"
+        ]
+      },
+      "role-skill": {
+        "role": "secondary",
+        "displayName": "Skill Orange",
+        "tonalRamp": [
+          "oklch(15% 0.1484 49.92)",
+          "oklch(26% 0.1484 49.92)",
+          "oklch(38% 0.1484 49.92)",
+          "oklch(49% 0.1484 49.92)",
+          "oklch(61% 0.1484 49.92)",
+          "oklch(72% 0.1484 49.92)",
+          "oklch(84% 0.1484 49.92)",
+          "oklch(95% 0.1484 49.92)"
+        ]
+      },
+      "role-app": {
+        "role": "secondary",
+        "displayName": "App Manifest Blue",
+        "tonalRamp": [
+          "oklch(15% 0.0998 244.14)",
+          "oklch(26% 0.0998 244.14)",
+          "oklch(38% 0.0998 244.14)",
+          "oklch(49% 0.0998 244.14)",
+          "oklch(61% 0.0998 244.14)",
+          "oklch(72% 0.0998 244.14)",
+          "oklch(84% 0.0998 244.14)",
+          "oklch(95% 0.0998 244.14)"
+        ]
+      },
+      "role-document": {
+        "role": "secondary",
+        "displayName": "Document Violet",
+        "tonalRamp": [
+          "oklch(15% 0.1106 295.55)",
+          "oklch(26% 0.1106 295.55)",
+          "oklch(38% 0.1106 295.55)",
+          "oklch(49% 0.1106 295.55)",
+          "oklch(61% 0.1106 295.55)",
+          "oklch(72% 0.1106 295.55)",
+          "oklch(84% 0.1106 295.55)",
+          "oklch(95% 0.1106 295.55)"
+        ]
+      },
+      "role-research": {
+        "role": "secondary",
+        "displayName": "Research Purple",
+        "tonalRamp": [
+          "oklch(15% 0.1519 310.95)",
+          "oklch(26% 0.1519 310.95)",
+          "oklch(38% 0.1519 310.95)",
+          "oklch(49% 0.1519 310.95)",
+          "oklch(61% 0.1519 310.95)",
+          "oklch(72% 0.1519 310.95)",
+          "oklch(84% 0.1519 310.95)",
+          "oklch(95% 0.1519 310.95)"
+        ]
+      },
+      "role-citation": {
+        "role": "secondary",
+        "displayName": "Citation Cyan",
+        "tonalRamp": [
+          "oklch(15% 0.0825 203.52)",
+          "oklch(26% 0.0825 203.52)",
+          "oklch(38% 0.0825 203.52)",
+          "oklch(49% 0.0825 203.52)",
+          "oklch(61% 0.0825 203.52)",
+          "oklch(72% 0.0825 203.52)",
+          "oklch(84% 0.0825 203.52)",
+          "oklch(95% 0.0825 203.52)"
+        ]
+      },
+      "reference-canvas": {
+        "role": "neutral",
+        "displayName": "Deep Reference Canvas",
+        "tonalRamp": [
+          "oklch(15% 0.0092 264.28)",
+          "oklch(26% 0.0092 264.28)",
+          "oklch(38% 0.0092 264.28)",
+          "oklch(49% 0.0092 264.28)",
+          "oklch(61% 0.0092 264.28)",
+          "oklch(72% 0.0092 264.28)",
+          "oklch(84% 0.0092 264.28)",
+          "oklch(95% 0.0092 264.28)"
+        ]
+      },
+      "reference-surface": {
+        "role": "neutral",
+        "displayName": "Reference Gradient Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0200 284.41)",
+          "oklch(26% 0.0200 284.41)",
+          "oklch(38% 0.0200 284.41)",
+          "oklch(49% 0.0200 284.41)",
+          "oklch(61% 0.0200 284.41)",
+          "oklch(72% 0.0200 284.41)",
+          "oklch(84% 0.0200 284.41)",
+          "oklch(95% 0.0200 284.41)"
+        ]
+      },
+      "reference-muted": {
+        "role": "neutral",
+        "displayName": "Role Count Gray",
+        "tonalRamp": [
+          "oklch(15% 0.0215 291.99)",
+          "oklch(26% 0.0215 291.99)",
+          "oklch(38% 0.0215 291.99)",
+          "oklch(49% 0.0215 291.99)",
+          "oklch(61% 0.0215 291.99)",
+          "oklch(72% 0.0215 291.99)",
+          "oklch(84% 0.0215 291.99)",
+          "oklch(95% 0.0215 291.99)"
+        ]
+      },
+      "reference-highlight": {
+        "role": "neutral",
+        "displayName": "Reference Interaction Highlight",
+        "tonalRamp": [
+          "oklch(15% 0.0471 87.03)",
+          "oklch(26% 0.0471 87.03)",
+          "oklch(38% 0.0471 87.03)",
+          "oklch(49% 0.0471 87.03)",
+          "oklch(61% 0.0471 87.03)",
+          "oklch(72% 0.0471 87.03)",
+          "oklch(84% 0.0471 87.03)",
+          "oklch(95% 0.0471 87.03)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Workspace Headline",
+        "purpose": "Primary map heading with responsive size overrides."
+      },
+      "title": {
+        "displayName": "Inspector Title",
+        "purpose": "Evidence and workspace-brief titles; the inspector applies its smaller local size."
+      },
+      "body": {
+        "displayName": "System UI Body",
+        "purpose": "Inherited UI font foundation, with compact local sizes in navigation and descriptions."
+      },
+      "evidence": {
+        "displayName": "Reading Excerpt",
+        "purpose": "Readable source and relationship quotes with preserved line breaks."
+      },
+      "label": {
+        "displayName": "Section Label",
+        "purpose": "Small section headings and supporting UI labels."
+      },
+      "mono": {
+        "displayName": "Original Quoted Text",
+        "purpose": "Native disclosure of the unmodified original quote."
+      },
+      "role-label": {
+        "displayName": "Role Heading",
+        "purpose": "Screen-scaled cloud and band headings, with tighter mobile letter spacing."
+      }
+    },
+    "shadows": [
+      {
+        "name": "display-settings",
+        "value": "0 15px 45px #0006",
+        "purpose": "Display controls float above the map."
+      },
+      {
+        "name": "command-dialog",
+        "value": "0 18px 60px #0008",
+        "purpose": "Native command dialog separates from the dimmed workspace."
+      },
+      {
+        "name": "inspector-drawer",
+        "value": "-10px 0 40px #0006",
+        "purpose": "Evidence drawer at intermediate viewport widths."
+      },
+      {
+        "name": "navigation-drawer",
+        "value": "12px 0 40px #0008",
+        "purpose": "Small-screen navigation drawer."
+      },
+      {
+        "name": "evidence-sheet",
+        "value": "0 -12px 35px #0008",
+        "purpose": "Small-screen evidence sheet."
+      },
+      {
+        "name": "selected-source",
+        "value": "drop-shadow(0 2px 6px #ecae7d50)",
+        "purpose": "Optional SVG filter on the selected source glyph."
+      },
+      {
+        "name": "reference-selection",
+        "value": "drop-shadow(0 2px 7px #eaaa7080)",
+        "purpose": "Optional glow on a selected reference-form source glyph."
+      },
+      {
+        "name": "expanded-panel",
+        "value": "8px 0 35px #0007",
+        "purpose": "Temporary Explore or Evidence drawer above the expanded desktop map."
+      },
+      {
+        "name": "reference-particle-bloom",
+        "value": "SVG feGaussianBlur stdDeviation 2.4 with duplicated blur merge in sRGB",
+        "purpose": "Role-colored glyph-only decorative proxies follow real particle poses; aria-hidden, noninteractive, viewport-bounded, and independently removable through Graph glow."
+      },
+      {
+        "name": "reference-layer-aura",
+        "value": "Radial opacity 0.22 at center, 0.07 at 45%, 0 at 100%",
+        "purpose": "Occupied Constellation role clouds and the Orbital knowledge band receive restrained color auras behind the evidence graph; Glow off and High contrast remove them."
+      },
+      {
+        "name": "reference-hub-illumination",
+        "value": "Warm central radius 140 world units; ring drop-shadow(0 0 6px #eaaa7090)",
+        "purpose": "Decorative core illumination independent of motion; Glow off and High contrast remove the aura and halo."
+      },
+      {
+        "name": "atlas-ambient-glow",
+        "value": "drop-shadow(0 0 3px var(--node-color))",
+        "purpose": "Modest light on actual Atlas source/project/satellite glyphs; disabled with Glow off or High contrast."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "background .16s, color .16s, border-color .16s",
+        "purpose": "Button state transitions, removed by the reduced-motion media rule."
+      },
+      {
+        "name": "toast-state",
+        "value": "opacity .18s, transform .18s",
+        "purpose": "Status toast appearance, removed by the reduced-motion media rule."
+      },
+      {
+        "name": "ambient-frame-cadence",
+        "value": "40ms minimum interval",
+        "purpose": "Existing SVG targets update at a bounded cadence in 2D and 3D without rebuilding the scene."
+      },
+      {
+        "name": "ambient-max-step",
+        "value": "80ms maximum active time step; internal speed clamped to 25 (100% current pace)",
+        "purpose": "Pause resets the prior timestamp, preventing catch-up jumps after hidden or paused intervals."
+      },
+      {
+        "name": "reference-ambient-orbit",
+        "value": "0.045 radians/s at speed 25",
+        "purpose": "Additional 3D camera orbit; source-role poses animate in both dimensions and pause for selected sources/relations, hovered or focused map targets, dragging, hidden pages, zero speed, reduced motion, and High contrast."
+      },
+      {
+        "name": "constellation-role-motion",
+        "value": "guidance 0.045, skill -0.095, app 0.075, document 0.06, research -0.07, citation 0.05 radians/s at speed 25; project 0",
+        "purpose": "Reversible rotations within the deterministic role clouds; noncentral roles add a bounded 0.18-radian volumetric tilt."
+      },
+      {
+        "name": "orbital-role-motion",
+        "value": "guidance 0.03, skill 0.065, app -0.035 radians/s at speed 25; knowledge sectors rock by sin(elapsed * 0.35) * 0.06 radians",
+        "purpose": "Concentric bands and knowledge-sector gaps remain intact; the project core stays fixed."
+      },
+      {
+        "name": "atlas-terminal-motion",
+        "value": "phase 0.75 radians/s at speed 25; x amplitude 3px and y amplitude 1.5px",
+        "purpose": "Restrained 2D overview/terminal-node movement over unchanged base positions; the legacy Source circle uses the same pose function."
+      },
+      {
+        "name": "scene-transition",
+        "value": "250ms cubic-bezier(0.16, 1, 0.3, 1); opacity 0.25 to 1, blur 2px to 0px",
+        "purpose": "Interruptible form/corpus/neighborhood/role/dimension transitions; suppressed by reduced motion."
+      },
+      {
+        "name": "drag-release",
+        "value": "180ms ease-out",
+        "purpose": "Pointer-following accent wash and guide attenuation settle without inertial camera movement; suppressed by reduced motion."
+      },
+      {
+        "name": "panel-arrival",
+        "value": "180ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Temporary command-center panels enter from a 5px vertical offset and opacity 0.6; suppressed by reduced motion."
+      },
+      {
+        "name": "motion-speed-range",
+        "value": "0–100%; internal speed 0–25; 0% Still; 100% existing pace",
+        "purpose": "Primary and Display sliders are synchronized, slower values retain fractional precision, and positive changes resume eligible motion while reading and still gates remain active; saved speeds clamp to the current endpoint."
+      },
+      {
+        "name": "relationship-focus-settle",
+        "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Source/link selection and Show all nodes settle real source and bloom opacity from the prior displayed pose; reduced motion applies emphasis immediately, independently of the selected-evidence ambient reading hold."
+      },
+      {
+        "name": "relationship-focus-opacity",
+        "value": "root 1; one hop 0.9; two 0.42; three 0.16; four 0.055; five or more 0.025; disconnected 0.012",
+        "purpose": "Shortest undirected recorded-link distance in the complete corpus/group before query/layer filters; hidden intermediates remain valid, selected links root both endpoints, glyph-only bloom matches particles, edges use their lesser endpoint, and actual source targets reveal on hover/focus."
+      },
+      {
+        "name": "relationship-guide-emphasis",
+        "value": "guides/auras 0.12; hub 0.18; role anchors 0.48; Atlas role headings/depth planes 0.4",
+        "purpose": "Organizational geometry recedes during source/link focus; Show all nodes clears selection and restores normal emphasis while preserving query, layer, and camera. Atlas aggregate project anchors retain ordinary overview emphasis."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "740px"
+      },
+      {
+        "name": "inspector-drawer-max",
+        "value": "1080px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1250px"
+      },
+      {
+        "name": "wide-desktop-min",
+        "value": "1500px"
+      },
+      {
+        "name": "command-center-stack-max",
+        "value": "900px"
+      },
+      {
+        "name": "command-center-compact-max",
+        "value": "1180px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "refersTo": "text-button",
+      "description": "Warm orange action used for citations, coverage, and preference reset.",
+      "html": "<button type=\"button\" class=\"ds-text-action\">Copy citation</button>",
+      "css": ".ds-text-action{font-family:\"Segoe UI\",system-ui,sans-serif;font-size:12px;color:var(--accent,#ecae7d);display:flex;align-items:center;gap:8px;text-align:left;padding:10px 0;background:transparent;border:0;border-radius:5px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-text-action:hover{background:#ffffff08}.ds-text-action:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}.ds-text-action:disabled{opacity:.45;cursor:default}@media(prefers-reduced-motion:reduce){.ds-text-action{transition:none}}"
+    },
+    {
+      "name": "Icon Action",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "Muted compact action with an authored inline SVG and a visible label.",
+      "html": "<button type=\"button\" class=\"ds-icon-action\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"/><circle cx=\"8\" cy=\"6\" r=\"2\"/><circle cx=\"16\" cy=\"12\" r=\"2\"/><circle cx=\"9\" cy=\"18\" r=\"2\"/></svg><span>Display</span></button>",
+      "css": ".ds-icon-action{font-family:\"Segoe UI\",system-ui,sans-serif;font-size:11px;display:flex;align-items:center;gap:6px;color:var(--muted,#a5ada4);padding:8px;background:transparent;border:0;border-radius:5px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-icon-action svg{flex-shrink:0}.ds-icon-action:hover{background:#ffffff08}.ds-icon-action:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-icon-action{transition:none}}"
+    },
+    {
+      "name": "Lens Navigation",
+      "kind": "nav",
+      "refersTo": "lens-option-active",
+      "description": "Projects and Research navigation with the existing warm active treatment.",
+      "html": "<nav class=\"ds-lens-nav\" aria-label=\"Workspace lens\"><button type=\"button\" class=\"ds-lens-option\" aria-pressed=\"true\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"5\" cy=\"6\" r=\"2\"/><circle cx=\"18\" cy=\"7\" r=\"2\"/><circle cx=\"11\" cy=\"18\" r=\"2\"/><path d=\"m7 6 9 1M6 8l4 8m7-7-5 7\"/></svg><span>Projects</span></button><button type=\"button\" class=\"ds-lens-option\" aria-pressed=\"false\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 6C9 3 5 3 3 4v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 2v14\"/></svg><span>Research</span></button></nav>",
+      "css": ".ds-lens-nav{display:grid;gap:3px;padding:0 10px 22px}.ds-lens-option{font-family:\"Segoe UI\",system-ui,sans-serif;display:flex;align-items:center;gap:10px;padding:11px 10px;text-align:left;font-size:13px;color:var(--muted,#a5ada4);background:transparent;border:0;border-radius:5px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-lens-option svg{flex-shrink:0}.ds-lens-option:hover{background:#ffffff08}.ds-lens-option[aria-pressed=true]{background:var(--selected,#342b23);color:var(--accent,#ecae7d)}.ds-lens-option:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-lens-option{transition:none}}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Bordered scope search with an inline icon and the existing slash shortcut hint.",
+      "html": "<label class=\"ds-search-field\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"10\" r=\"6\"/><path d=\"m15 15 5 5\"/></svg><input type=\"search\" aria-label=\"Search this lens\" placeholder=\"Search this lens\" autocomplete=\"off\"><kbd>/</kbd></label>",
+      "css": ".ds-search-field{font-family:\"Segoe UI\",system-ui,sans-serif;display:flex;align-items:center;gap:8px;padding:8px 9px;border:1px solid var(--line,#333a34);border-radius:6px;color:var(--muted,#a5ada4)}.ds-search-field svg{flex-shrink:0}.ds-search-field input{font-family:\"Segoe UI\",system-ui,sans-serif;font-size:12px;width:100%;min-width:0;border:0;color:var(--text,#ecede5);background:transparent;caret-color:var(--accent,#ecae7d)}.ds-search-field input::placeholder{color:var(--muted,#a5ada4)}.ds-search-field input:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:6px}.ds-search-field kbd{font-size:10px;border:1px solid var(--line,#333a34);border-radius:3px;padding:2px 4px;color:var(--muted,#a5ada4)}"
+    },
+    {
+      "name": "Layer Filter",
+      "kind": "chip",
+      "refersTo": "layer-chip-active",
+      "description": "Compact wrapping source-layer filters with a neutral active surface.",
+      "html": "<div class=\"ds-layer-filters\" role=\"group\" aria-label=\"Source layer\"><button type=\"button\" class=\"ds-layer-chip\" aria-pressed=\"true\">All layers</button><button type=\"button\" class=\"ds-layer-chip\" aria-pressed=\"false\">Main docs</button><button type=\"button\" class=\"ds-layer-chip\" aria-pressed=\"false\">Skills</button></div>",
+      "css": ".ds-layer-filters{display:flex;gap:4px;flex-wrap:wrap}.ds-layer-chip{font-family:\"Segoe UI\",system-ui,sans-serif;font-size:11px;color:var(--muted,#a5ada4);padding:6px 9px;min-height:28px;background:transparent;border:0;border-radius:5px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-layer-chip:hover{background:#ffffff08}.ds-layer-chip[aria-pressed=true]{background:#31362f;color:var(--text,#ecede5)}.ds-layer-chip:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-layer-chip{transition:none}}"
+    },
+    {
+      "name": "Dimension Switch",
+      "kind": "button",
+      "refersTo": "dimension-option-active",
+      "description": "Bordered segmented 2D and perspective 3D control.",
+      "html": "<div class=\"ds-dimension-switch\" role=\"group\" aria-label=\"Graph dimension\"><button type=\"button\" class=\"ds-dimension-option\" aria-pressed=\"true\">2D</button><button type=\"button\" class=\"ds-dimension-option\" aria-pressed=\"false\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 2 9 5v10l-9 5-9-5V7zm0 10 9-5M3 7l9 5v10\"/></svg>3D</button></div>",
+      "css": ".ds-dimension-switch{display:flex;padding:3px;border:1px solid var(--line,#333a34);border-radius:6px;gap:2px;width:max-content}.ds-dimension-option{font-family:\"Segoe UI\",system-ui,sans-serif;padding:6px 10px;display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted,#a5ada4);background:transparent;border:0;border-radius:5px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-dimension-option svg{flex-shrink:0}.ds-dimension-option:hover{background:#ffffff08}.ds-dimension-option[aria-pressed=true]{background:var(--surface,#242824);color:var(--text,#ecede5)}.ds-dimension-option:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-dimension-option{transition:none}}"
+    },
+    {
+      "name": "Relationship Endpoint",
+      "kind": "card",
+      "refersTo": "endpoint-card",
+      "description": "Clickable relationship endpoint container; the preview omits source data.",
+      "html": "<button type=\"button\" class=\"ds-endpoint-card\"><small>From</small></button>",
+      "css": ".ds-endpoint-card{font-family:\"Segoe UI\",system-ui,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:5px;width:100%;text-align:left;min-height:40px;background:var(--surface,#242824);color:var(--text,#ecede5);padding:12px;margin:10px 0;font-size:12px;overflow-wrap:anywhere;border:0;border-radius:3px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-endpoint-card small{color:var(--muted,#a5ada4);font-size:10px}.ds-endpoint-card:hover{background:#ffffff08}.ds-endpoint-card:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-endpoint-card{transition:none}}"
+    },
+    {
+      "name": "Command Row",
+      "kind": "button",
+      "description": "A real command from the Jump to anything dialog.",
+      "html": "<button type=\"button\" class=\"ds-command-row\"><strong>Fit map</strong><small>Reset and center the current map</small></button>",
+      "css": ".ds-command-row{font-family:\"Segoe UI\",system-ui,sans-serif;width:100%;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;padding:12px;font-size:13px;color:var(--text,#ecede5);background:transparent;border:0;border-radius:5px;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-command-row strong{font-weight:500}.ds-command-row small{color:var(--muted,#a5ada4);font-size:11px;overflow-wrap:anywhere}.ds-command-row:hover{background:#ffffff08}.ds-command-row:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-command-row{transition:none}}"
+    },
+    {
+      "name": "Graph Form Switch",
+      "kind": "button",
+      "refersTo": "graph-form-option-active",
+      "description": "Primary Constellation, Orbital, and Atlas choices with the implemented warm active underline.",
+      "html": "<div class=\"ds-form-switch\" role=\"group\" aria-label=\"Graph form\"><button type=\"button\" class=\"ds-form-option\" aria-pressed=\"true\">Constellation</button><button type=\"button\" class=\"ds-form-option\" aria-pressed=\"false\">Orbital</button><button type=\"button\" class=\"ds-form-option\" aria-pressed=\"false\">Atlas</button></div>",
+      "css": ".ds-form-switch{display:flex;gap:4px;border-bottom:1px solid var(--line,#333a34);width:max-content}.ds-form-option{font-family:\"Segoe UI\",system-ui,sans-serif;padding:8px 12px;font-size:12px;color:var(--muted,#a5ada4);border:0;border-radius:4px 4px 0 0;border-bottom:2px solid transparent;background:transparent;cursor:pointer;transition:background .16s,color .16s,border-color .16s}.ds-form-option:hover{background:#ffffff08}.ds-form-option[aria-pressed=true]{color:var(--accent,#ecae7d);border-bottom-color:var(--accent,#ecae7d)}.ds-form-option:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-form-option{transition:none}}"
+    },
+    {
+      "name": "Source Role Glyphs",
+      "kind": "custom",
+      "description": "The existing skill diamond, app-manifest hexagon, and document circle; examples contain no source records or counts.",
+      "html": "<svg class=\"ds-role-glyphs\" width=\"300\" height=\"74\" viewBox=\"0 0 300 74\" role=\"group\" aria-label=\"Source role glyphs\"><g class=\"ds-role-example ds-role-skill\" tabindex=\"0\" aria-label=\"Skill diamond\"><path class=\"ds-role-glyph\" d=\"M0-10 7 0 0 10-7 0Z\" transform=\"translate(36 20)\"/><text class=\"ds-role-glyph-label\" x=\"36\" y=\"54\" text-anchor=\"middle\">SKILLS</text></g><g class=\"ds-role-example ds-role-app\" tabindex=\"0\" aria-label=\"App manifest hexagon\"><polygon class=\"ds-role-glyph\" points=\"0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5\" transform=\"translate(143 20)\"/><text class=\"ds-role-glyph-label\" x=\"143\" y=\"54\" text-anchor=\"middle\">APP MANIFESTS</text></g><g class=\"ds-role-example ds-role-document\" tabindex=\"0\" aria-label=\"Document circle\"><circle class=\"ds-role-glyph\" r=\"7\" cx=\"256\" cy=\"20\"/><text class=\"ds-role-glyph-label\" x=\"256\" y=\"54\" text-anchor=\"middle\">DOCUMENTS</text></g></svg>",
+      "css": ".ds-role-glyphs{font-family:\"Segoe UI\",system-ui,sans-serif;overflow:visible}.ds-role-glyph{fill-opacity:.85;stroke-width:.6;stroke-opacity:.85}.ds-role-skill .ds-role-glyph{fill:#f38b4c;stroke:#ffc38a}.ds-role-app .ds-role-glyph{fill:#263e59;stroke:#79b9ed;stroke-width:1.4}.ds-role-document .ds-role-glyph{fill:#b4a0ed;stroke:#b4a0ed}.ds-role-glyph-label{font-size:11px;font-weight:600;letter-spacing:.055em}.ds-role-skill .ds-role-glyph-label{fill:#f38b4c}.ds-role-app .ds-role-glyph-label{fill:#79b9ed}.ds-role-document .ds-role-glyph-label{fill:#b4a0ed}.ds-role-example:hover .ds-role-glyph,.ds-role-example:focus .ds-role-glyph{fill:#fff0ce;stroke:#fff0ce;stroke-width:2}.ds-role-example:focus-visible{outline:2px solid var(--focus,#f2b486);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Evidence Constellation",
+    "overview": "Tomeowl's implemented viewer is an Operate workspace for finding a source, following recorded links, and inspecting cited evidence.\nA dominant charcoal map opens in Command center between divided workspace and research dashboard rails, with navigation and evidence available as temporary panels.\nWarm orange marks actions and selection, while role colors distinguish source clouds and concentric bands.\nSource selection reveals actual linked neighborhoods through progressive distance emphasis, with a reset that preserves the active view.\n\nThe interface uses system fonts, authored inline SVG, native controls, and an offline snapshot.\nIts command-center identity comes from precise chrome, organized layers, actual snapshot inventory, and optional illumination around real source particles and role layers.\nThe supplied [clusters](reference/visual-direction/rubric-clusters.png) establishes the volumetric role-cloud form; [Rings](reference/visual-direction/rubric-rings.png) and [Agentic OS arms](reference/visual-direction/agentic-os-arms.png) establish concentric role bands.\nThe [command-center](reference/visual-direction/rubric-command-center.png) informs the divided side modules and dominant central graph, while the [dependency map](reference/visual-direction/claude-dependency-map.png) informs readable inspection.\nReference geometry and glyphs are adapted to actual source roles rather than copying the references' unrelated application, routine, or dashboard data.\nThe archived prototype is a reference rather than the active rendering system.\n\nThis document records the implemented Command center and Map surfaces, Constellation/Orbital/Atlas forms over the Projects and Research lenses, source neighborhoods, dashboard sections, and evidence inspector.\nMeasure Lab, Program Atlas, and Review Desk remain proposed surfaces in the [engineering evidence specification](docs/drafts/ENGINEERING-EVIDENCE-SPEC.md).\nTheir analytical interactions are not implemented viewer components.",
+    "keyCharacteristics": [
+      "A dominant evidence map framed by real snapshot sections or expanded in the separate Map surface.",
+      "Warm orange actions and selection over charcoal surfaces.",
+      "Volumetric role clouds and concentric bands over actual source particles.",
+      "Role color and glyph shape separated from recorded relationships.",
+      "Animated 2D and 3D with stable reading/targeting and a visible still control.",
+      "System typography and authored inline SVG that work offline."
+    ],
+    "rules": [
+      {
+        "name": "The Selection Rule",
+        "body": "Distinguish selection with an outline and active-row surface independently of graph illumination because Skills also uses warm orange.",
+        "section": "colors"
+      },
+      {
+        "name": "The Evidence Channel Rule",
+        "body": "Keep category color, visual grouping, inventory membership, and recorded references visibly distinct.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Rule",
+        "body": "Keep excerpts readable and preserve original quoted text in a separate native disclosure.",
+        "section": "typography"
+      },
+      {
+        "name": "The Shared Scope Rule",
+        "body": "Derive map nodes, source rows, scope counts, and inspectable links from the same scoped projection, and label whole-snapshot dashboard inventory separately.",
+        "section": "layout"
+      },
+      {
+        "name": "The Still Reading Rule",
+        "body": "Pause ambient movement while a source or relation is selected or a map target is hovered or keyboard-focused so reading and selection stay stable.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Provenance Rule",
+        "body": "Every displayed relationship must distinguish structural membership from a recorded reference and expose the evidence it actually carries.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do keep scope, search, layer filters, and evidence ahead of display effects.",
+      "Do preserve the charcoal and warm orange identity with the existing system font stack.",
+      "Do retain a complete source list and keyboard alternatives alongside the map.",
+      "Do show real counts, revision context, and the distinction between fetched evidence and URL-only citation records.",
+      "Do distinguish whole-snapshot dashboard inventory from filtered graph scope and keep dashboard rows connected to actual evidence actions.",
+      "Do preserve stable reading and a useful still view when motion or glow is disabled.",
+      "Do keep faded sources reachable and recorded link-distance emphasis separate from inferred meaning.",
+      "Do retain the reference forms' central hierarchy, role glyphs, and distinct cloud or concentric geometry."
+    ],
+    "donts": [
+      "Don't imply similarity, agreement, or confidence from layout, group color, or shared citation URLs.",
+      "Don't invent decorative messages, calendars, routines, agents, or workspace records.",
+      "Don't replace original quoted text with the cleaned reading excerpt.",
+      "Don't treat proposed analytical surfaces as implemented components.",
+      "Don't make sound or ambient motion a requirement for using the evidence workspace.",
+      "Don't call a single evenly spaced source circle a concentric Orbital view."
+    ]
+  }
+}

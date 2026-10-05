@@ -1,0 +1,56 @@
+import type { Snapshot } from "./types";
+
+export const icon = (name: string, size = 18) => {
+  const paths: Record<string, string> = {
+    owl: '<path d="M4 5l3 2h10l3-2v9a8 8 0 0 1-16 0z"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><path d="m10 16 2 2 2-2"/>',
+    graph: '<circle cx="5" cy="6" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="11" cy="18" r="2"/><path d="m7 6 9 1M6 8l4 8m7-7-5 7"/>',
+    book: '<path d="M12 6C9 3 5 3 3 4v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 2v14"/>',
+    search: '<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>',
+    layers: '<path d="m12 3 10 5-10 5L2 8zm-10 9 10 5 10-5M2 16l10 5 10-5"/>',
+    file: '<path d="M6 3h8l4 4v14H6zm8 0v5h4M9 12h6m-6 4h6"/>',
+    app: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+    skill: '<path d="m13 2-9 12h7l-1 8 10-12h-7z"/>',
+    arrow: '<path d="M4 12h16m-6-6 6 6-6 6"/>',
+    back: '<path d="M20 12H4m6-6-6 6 6 6"/>',
+    cube: '<path d="m12 2 9 5v10l-9 5-9-5V7zm0 10 9-5M3 7l9 5v10"/>',
+    fit: '<path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/>',
+    settings: '<path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="9" cy="18" r="2"/>',
+    close: '<path d="m6 6 12 12M6 18 18 6"/>',
+    link: '<path d="m9 15 6-6m-8 4-2 2a4 4 0 0 0 6 6l3-3m-3-8 2-2a4 4 0 0 1 6 6l-3 3"/>',
+    pause: '<path d="M8 5v14M16 5v14"/>',
+    play: '<path d="m8 4 12 8-12 8z"/>',
+    sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/>',
+  };
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] ?? paths.file}</svg>`;
+};
+
+export function shellMarkup(_snapshot: Snapshot) {
+  const media = !!_snapshot.media;
+  return `<div class="app-shell">
+    <header class="topbar"><a class="brand" href="#" data-action="home" aria-label="Tomeowl overview">${icon("owl", 27)}<span>tomeowl<span class="brand-period">.</span></span></a>
+      <nav class="surface-switch" aria-label="Workspace view"><button data-surface="center">${icon("app",15)}Command center</button><button data-surface="map">${icon("graph",15)}Map</button></nav><div class="workspace-name"><span class="local-badge"><i></i> Offline snapshot</span></div>
+      <button class="palette-trigger" data-action="palette" aria-label="Jump to anything" aria-keyshortcuts="Control+K">${icon("search", 15)}<span>Jump to anything</span><kbd>Ctrl K</kbd></button></header>
+    <div class="workspace">
+      <aside id="dashboard-left" class="dashboard-rail dashboard-left" aria-label="Workspace dashboard"></aside>
+      <aside class="rail left-rail" aria-label="Workspace navigation"><div class="rail-heading"><h2>Explore</h2><button class="rail-close" data-action="close-sources" aria-label="Close navigation">${icon("close")}</button></div>
+        <nav class="lens-nav" aria-label="Workspace lens"><button data-corpus="workspace">${icon("graph")}<span>${media?"Channels":"Projects"}</span><span id="project-total" class="nav-count"></span></button><button data-corpus="literature"${media?" hidden":""}>${icon("book")}<span>Research</span><span id="research-total" class="nav-count"></span></button></nav>
+        <div class="rail-section"><label class="search-box">${icon("search", 16)}<input id="search" type="search" aria-label="Search this lens" placeholder="Search this lens" autocomplete="off"><kbd>/</kbd></label>
+        <div class="list-caption"><span id="list-label">Projects</span><span id="visible-count"></span></div><nav id="source-list" class="source-list" aria-label="Groups and sources"></nav></div>
+        <div class="rail-foot"><div class="workspace-root">${icon("layers", 16)}<span id="workspace-root">Local archive</span></div><span id="scan-summary">Revisioned snapshot</span><button data-action="coverage" class="text-button">View scan coverage ${icon("arrow", 14)}</button></div></aside>
+      <main class="map-panel"><div class="map-heading"><div><div class="breadcrumb"><button data-action="overview">Workspace</button><span id="breadcrumb-scope"></span></div><h1 id="map-title">Your connected workspace</h1><p id="map-subtitle">Explore the projects, ideas and tools behind your work.</p></div><div class="view-actions"><button class="mobile-rail-toggle" data-action="sources" aria-expanded="false">Explore</button><div class="mode-switch" role="group" aria-label="Graph dimension"><button data-dimension="2d">2D</button><button data-dimension="3d">${icon("cube", 15)}3D</button></div><button class="icon-button" data-action="display" aria-expanded="false" aria-controls="display-settings">${icon("settings", 17)}<span>Display</span></button></div></div>
+      <div class="center-lens" role="group" aria-label="Map lens"><button data-corpus="workspace">${icon("graph",14)}${media?"Channels":"Projects"}</button><button data-corpus="literature"${media?" hidden":""}>${icon("book",14)}Research</button><span>Revisioned local evidence</span></div>
+      <div class="form-toolbar"><div class="form-switch" role="group" aria-label="Graph form">${media?'<button data-form="directed">Directed</button>':""}<button data-form="constellation">Constellation</button><button data-form="orbital">Orbital</button><button data-form="cluster">Atlas</button></div><button data-action="toggle-motion" class="motion-button" aria-pressed="true">${icon("pause",14)}<span>Pause motion</span></button><button data-action="focus-map" class="focus-map-button" aria-pressed="false">${icon("fit", 14)}<span>Expand map</span></button></div>
+      <div class="motion-controls"><label class="motion-speed-control" for="motion-speed"><span>Motion speed</span><input id="motion-speed" type="range" aria-label="Motion speed" min="0" max="100" step="1" value="100" aria-describedby="motion-speed-help"><output id="motion-speed-value" for="motion-speed">100%</output></label><span id="motion-speed-help" class="motion-pace-hint">100% = current pace</span><button data-action="toggle-glow" class="glow-button" aria-pressed="true" title="Illuminate particles and source layers">${icon("sun",15)}Glow</button></div>
+      <div class="scope-toolbar"><div id="layer-tabs" class="layer-tabs" role="group" aria-label="Source layer"></div><button data-action="back" class="back-button" hidden>${icon("back", 14)}Overview</button></div>
+      <div class="map-context"><div id="map-note" class="map-note"></div><button id="clear-relationship-focus" data-action="clear-focus" class="text-button clear-focus-button" hidden>Show all nodes</button></div><section class="graph-wrap" aria-label="Knowledge map"><svg id="graph" tabindex="0" role="group" aria-label="Interactive knowledge map"></svg><nav id="mobile-project-overview" class="mobile-project-overview" aria-label="Project overview"></nav><div id="map-empty" class="empty-map" hidden></div>
+        <div class="map-hint" id="map-hint">Open a project to explore its layers</div><div class="map-legend">${media?'<span><i class="legend-directed"></i>Contains</span><span><i class="legend-overlap"></i>Text overlap</span><span>Description and transcript are sibling branches</span>':'<span><i class="legend-group"></i>Visual grouping</span><span><i class="legend-edge"></i>Recorded link</span><span><i class="legend-membership"></i>Inventory</span>'}</div>
+        <div class="camera-controls" aria-label="Camera controls"><div class="pan-controls"><button data-pan="left" aria-label="Pan left">${icon("back", 13)}</button><button data-pan="right" aria-label="Pan right">${icon("arrow", 13)}</button><button data-pan="up" aria-label="Pan up">Up</button><button data-pan="down" aria-label="Pan down">Down</button></div><div id="rotate-controls" hidden><button data-rotate="left" aria-label="Rotate left">${icon("back", 15)}</button><button data-rotate="right" aria-label="Rotate right">${icon("arrow", 15)}</button><button data-rotate="up" aria-label="Tilt up">Tilt +</button><button data-rotate="down" aria-label="Tilt down">Tilt -</button></div><button data-action="zoom-out" aria-label="Zoom out">−</button><span id="zoom-readout">100%</span><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="fit" aria-label="Fit and reset camera">${icon("fit", 17)}</button></div>
+      </section><footer class="map-footer"><span id="scope-stats"></span><span id="camera-help">Drag to pan · Scroll to zoom</span><button class="mobile-rail-toggle" data-action="inspector" aria-expanded="false">Evidence</button></footer></main>
+      <aside class="rail right-rail" aria-label="Evidence inspector"><div class="inspector-heading"><h2 id="inspector-heading">Workspace brief</h2><button class="rail-close" data-action="close-inspector" aria-label="Close evidence">${icon("close")}</button></div><div id="inspector" class="inspector-content"></div></aside>
+      <aside id="dashboard-right" class="dashboard-rail dashboard-right" aria-label="Research and coverage dashboard"></aside>
+    </div>
+    <section id="display-settings" class="display-settings" hidden aria-label="Display settings"><div class="settings-heading"><h2>Display</h2><button data-action="display" aria-label="Close display settings">${icon("close")}</button></div><label>View preset<select id="profile"><option value="engineer">Engineer</option><option value="presentation">Presentation</option><option value="contrast">High contrast · still</option></select></label><label>Graph form<select id="layout">${media?'<option value="directed">Directed</option>':""}<option value="constellation">Constellation</option><option value="orbital">Orbital</option><option value="cluster">Atlas</option><option value="rings">Source circle · legacy</option></select></label><label class="check-label"><input type="checkbox" id="labels" checked>Source labels on zoom</label><label class="check-label"><input type="checkbox" id="glow" checked>Graph glow</label><label class="check-label"><input type="checkbox" id="motion"><span id="motion-label">Ambient orbit · 3D</span></label><label class="check-label"><input type="checkbox" id="sound">Selection sound</label><label>Motion speed<input id="orbit-speed" aria-label="Motion speed in Display" type="range" min="0" max="100" step="1" value="100"><span id="speed-value">100%</span></label><p>Preferences stay in this browser. Evidence stays unchanged.</p><button data-action="reset-preferences" class="text-button">Reset display preferences</button></section>
+    <dialog id="command-dialog" class="command-dialog" aria-label="Jump to a source or command"><div class="command-search">${icon("search")}<input id="command-search" aria-label="Search sources and commands" placeholder="Search sources and commands" autocomplete="off"><button data-action="close-palette" aria-label="Close commands">${icon("close")}</button></div><div id="command-list" class="command-list"></div><p class="command-foot">Enter to open · Escape to close</p></dialog><div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>`;
+}
+
