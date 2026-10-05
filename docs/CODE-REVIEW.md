@@ -1,8 +1,24 @@
 # Code review
 
+## Full video-library review, 2026-10-05
+
+The fixed point is Git commit `8a44ef7`, compared with the full-library working changes and new adapter, CLI recipe, and behavioral fixtures.
+Separate reviewers checked the user-provided project standards and the [full-library requirements](SPEC.md#full-video-library-requirements-2026-10-05).
+
+| Axis | Result |
+|---|---|
+| Standards | Source-byte checks now reject changed raw artifacts, current SQLite payloads, and independently selected descriptions before finalization mutates derived links; regression fixtures preserve prior state on rejection. |
+| Spec | Leading Unicode markers survive chunk, search-index, and description-conflict storage; current citations and original text conservation pass, and documentation distinguishes sample bounds from full-library ingestion and paged exports. |
+
+There are no remaining identified blocking findings on either axis.
+The independent complete-corpus proof checks every current video, cue, description span, generated record, cited relationship, copied URL, and both search indexes against the original archive.
+The separate view proof verifies complete page unions, disclosed omissions, parent closure, advancing cursors, and bounded output for a long video and a channel.
+Source database/WAL/SHM hashes match the pre-import audit, and the frozen UI is unchanged; this review does not assign a new UI score.
+The [implementation status](STATUS.md#complete-viberaven-catalog-2026-10-05) records observed counts and the local verification artifacts.
+
 ## Command center and motion integration, 2026-10-03
 
-The fixed point is the SHA-256-verified set of 33 files under `data/command-center/before`; this workspace has no Git repository.
+The fixed point is the SHA-256-verified set of 33 files under `data/command-center/before`; Git was not configured at the time of this review.
 The dashboard worker implemented the pure inventory projection and separate DOM surface, while the motion worker implemented bounded pose changes and in-place scene updates.
 The independent UI reviewer inspected evidence truth and motion continuity, and the motion worker then performed a read-only review of the coordinator's separate state, layout, rendering and CSS integration.
 This was a focused integration review, rather than another complete audit of the catalog backend.
@@ -28,7 +44,7 @@ The listed integration findings are resolved; general hardware performance and a
 ## Reference correction, 2026-10-03
 
 The independent Standards and Spec agents reviewed the reference correction in parallel against the [current UI contract](SPEC.md#ui-design-slice-2026-10-03).
-The fixed point is the SHA-256-verified copy under `data/reference-form/before`; this workspace has no Git repository.
+The fixed point is the SHA-256-verified copy under `data/reference-form/before`; Git was not configured at the time of this review.
 Changed-file comparisons use `git diff --no-index` against those copies, while the new reference geometry and scene modules are reviewed directly.
 
 ### Standards
@@ -55,7 +71,7 @@ Standards: zero findings; Spec: one resolved finding and zero unresolved finding
 ## Earlier evidence atlas review, 2026-10-03
 
 The Standards and Spec axes were reviewed by separate subagents and kept separate through follow-up review.
-This workspace has no Git repository, so the fixed point is the verified pre-change copy under `data/design-workspace/before`, rather than a commit or merge-base.
+Git was not configured at the time of this review, so its fixed point is the verified pre-change copy under `data/design-workspace/before`.
 Comparisons use `git diff --no-index data/design-workspace/before/src/viewer/render.ts src/viewer/render.ts` and equivalent changed-file comparisons; new projection/sample modules are reviewed directly.
 The review contract is [SPEC.md](SPEC.md#ui-design-slice-2026-10-03), with the supplied AGENTS instructions, current architecture, and the code-review skill's Fowler smell baseline.
 

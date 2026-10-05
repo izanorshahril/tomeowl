@@ -1,5 +1,38 @@
 # Implementation status
 
+## Complete Viberaven source audit, 2026-10-05
+
+Audited every one of the 4,298 SQLite video rows, current transcript artifacts, raw JSON files, and description text files in one read-only SQLite snapshot.
+There are no SQLite-only or raw-only videos, missing current artifacts, invalid raw JSON records, or cue-content differences.
+All 2,744,119 current caption cues match normalized SQLite rows in ordinal, timestamp, and text; another 471 rows belong to one historical artifact.
+All 4,299 artifact BLOB hashes verify, including the historical revision.
+The 4,297 enriched raw JSON hashes differing from current BLOBs reflect description/link metadata only, with caption cues unchanged.
+There are 4,275 nonempty descriptions and 23 stored empty values, with no substantive conflicts across SQLite, embedded JSON, and text sidecars.
+The 4,096 exact-string sidecar differences are line-ending representation, including five CRCRLF cases; canonical content was not rewritten.
+Publication metadata matches for 4,297 records and is absent in both sources for one record; relative labels were not converted into dates.
+Database integrity and foreign-key checks pass, database/WAL hashes match before and after, and all raw file signatures remain unchanged.
+The [source audit](../data/viberaven-completion/coverage-audit.json) records complete counts, comparison methods, bounds, and source stability evidence.
+
+## Complete Viberaven catalog, 2026-10-05
+
+Delivered the [full-library CLI recipe](VIDEO-GRAPH.md#full-library-from-sqlite), independently of the representative sample and frozen viewer limits.
+The current corpus contains all 41 channels and 4,298 videos, 4,420 description passages, and 34,984 transcript passages: 43,743 indexed sources with no rejected video rows or omissions.
+All 2,744,119 current cues and 5,501,568 selected description characters are conserved with original spans and timestamps.
+The source's historical artifact remains in its archive and is included in the source audit rather than the current-content graph.
+The catalog has 43,702 directed ownership edges, 4,287 cross-video lexical suggestions, and all 18,590 extracted URL records.
+Every relation has valid current endpoint citations, lexical passage degree stays at two or fewer, and no lexical edge connects passages from the same video.
+Both search indexes match their original passage bodies and all generated record hashes verify.
+Native retrieval and the compiled executable return located evidence within explicit character and byte budgets without QMD, Graphify, or model inference.
+Independent pagination proof conserves all 502 nodes for the longest video and all 423 nodes for a channel across two pages each, with parent closure and a 400-node page ceiling.
+The largest verified page HTML is 3,926,703 bytes, below the preview's 16 MiB bound.
+Recovery checks reject changed source artifacts and independently stored descriptions before replacing derived links.
+Regression checks preserve leading Unicode markers in passages, search indexes, and competing descriptions; six affected generated records were restored from their original bytes with a verified SQLite rollback snapshot.
+No Viberaven content or database records were rewritten, and source database/WAL/SHM hashes match the source audit before and after verification.
+All 21 authored viewer file hashes remain unchanged.
+Final release checks pass 220 tests with 2,876 assertions, and Windows x64 compilation succeeds with Bun 1.4.2.
+The [complete-corpus proof](../data/viberaven-completion/library-verification-final.json) and [page proof](../data/viberaven-completion/view-page-verification.json) are retained as ignored local verification artifacts, alongside the generated catalog and rollback snapshots.
+The repository includes the source, behavioral fixtures, and rebuild commands; it excludes local archive content, databases, exports, binaries, and review captures.
+
 ## Directed Viberaven media graph, 2026-10-05
 
 Delivered the [bounded media graph recipe](VIDEO-GRAPH.md), using current raw JSON from Viberaven's supplied archive.
@@ -280,7 +313,7 @@ All sample sources and relationships remain reachable through Explore and the ev
 Small-screen 2D Projects uses a scrolling named overview; desktop and 3D retain spatial project groups.
 Snapshots retain the revisions captured during generation and do not silently check live file changes.
 Bounds counters record discovery-pass events, which are not a unique count of final missing files; the additional research pass can include a document initially excluded by the per-project selection budget.
-Because no Git repository is configured, the verified pre-change copies remain under `data/design-workspace/before` for recovery.
+Git was not configured for this slice, so verified pre-change copies remain under `data/design-workspace/before` for recovery.
 
 ## Earlier implementation and research history
 
@@ -337,7 +370,7 @@ Added a [current UX assessment](research/ux-assessment-2026-10-02.md), [backend/
 Reviewed current source and stored desktop evidence; no new live usability study or candidate performance benchmark was run.
 The isolated last30days sweep completed through approved execution after a sandbox output-directory access failure, and its generated public report is preserved under `docs/research/raw`.
 No runtime code, package dependency, model installation, database schema, or shipped feature changed in this pass.
-The workspace has no Git repository, so document before-copies with matching hashes were retained under `data/research-session/docs-before`.
+Git was not configured for this research, so document before-copies with matching hashes were retained under `data/research-session/docs-before`.
 The documentation check found no broken local Markdown links across 17 active documentation files and no duplicate IDs among the 40 proposed requirements.
 Runtime tests were not rerun because this pass changed documentation only; prior release verification above remains historical evidence.
 
@@ -349,7 +382,7 @@ The core direction retains SQLite evidence/FTS, with optional columnar analytics
 The frontend direction coordinates map, chart, table, document, and code views with meaningful grouping, stable selection, saved preferences, purposeful effects, and still/accessible alternatives.
 Updated PRODUCT, DESIGN, architecture, README, and existing roadmap cross-references; M1 remains the recommended next implementation slice.
 Public documentation describes reusable software workflows and excludes unrelated unpublished workspace references.
-Verified seven affected public document before-copies by SHA-256 under the ignored local research-session directory because this workspace has no Git repository.
+Verified seven affected public document before-copies by SHA-256 under the ignored local research-session directory because Git was not configured for this slice.
 Primary sources were checked for current candidate capabilities, maintenance, licenses, and deployment limitations.
 No runtime code, package dependencies, model assets, database schemas, or shipped capabilities changed, and no new candidate performance benchmark or live usability study was run.
 The new capability requirements and performance budgets are proposals that need declared fixtures and target-environment verification.

@@ -254,7 +254,24 @@ The authorized media extension is specified and exercised in [VIDEO-GRAPH.md](VI
 It introduces four source roles with stable channel/video identities and independent description/transcript passage branches.
 The enriched snapshot provides explicit containment arrows, symmetric lexical overlap, timestamp/raw-artifact provenance, media coverage, and an isolated Directed form while preserving existing workspace defaults.
 The importer remains headless, read-only on the source archive, bounded to 24 videos and 2,048 passages, and compatible with the existing SQLite evidence/retrieval and offline HTML seams.
-This slice does not implement embedding inference, actual Graphify document extraction, direct SQLite video import, or whole-archive indexing.
+This initial sample slice does not implement embedding inference or actual Graphify document extraction.
+
+## Full video-library requirements, 2026-10-05
+
+The real Viberaven use case requires complete catalog ingestion independently of graph display limits.
+Enumerate every SQLite video and reconcile matching local transcript JSON and description text without fetching or rewriting source content.
+Keep SQLite open read-only and account for database-only records, raw-only records, missing content, conflicting revisions, known empty descriptions, and invalid inputs explicitly.
+Older transcript artifact JSON may predate description enrichment; treat separately stored descriptions as independently evidenced content rather than assuming the transcript itself changed.
+Validate original artifact hashes, caption order, timestamps, description spans, and channel/video identity before creating indexed evidence.
+Process bounded per-video inputs into a disk-backed Tomeowl catalog instead of retaining the complete caption archive or graph in memory.
+Preserve directed channel-to-video and video-to-description/transcript ownership, stable identities, and literal current citations.
+No source row may disappear because of the representative sample's 24-video or 2,048-passage limits.
+Report admitted and rejected counts, original-source provenance, content availability, and validation failures in machine-readable coverage.
+All accepted content must be reachable through native retrieval and explicit graph-view exports.
+Export bounded views through the frozen viewer, with shown versus available totals and omissions disclosed; a bounded view is never proof of complete ingestion.
+Lexical cross-links are candidate-bounded text-overlap suggestions with evidence and degree limits, rather than semantic facts or embedding results.
+Verify the complete imported video identity set, per-video passage coverage, original cue and description conservation, graph endpoints, foreign keys, SQLite integrity, and source immutability against the current archive.
+Keep QMD, Graphify, embeddings, and model inference optional.
 
 ## Later releases
 

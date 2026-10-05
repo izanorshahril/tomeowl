@@ -11,6 +11,7 @@
     "check": "bun src/viewer/build.ts && bun test ./tests",
     "sample:workspace": "bun scripts/workspace-sample.ts",
     "sample:videos": "bun src/viewer/build.ts && bun scripts/viberaven-sample.ts",
+    "library:videos": "bun src/viewer/build.ts && bun scripts/viberaven-library.ts",
     "snapshot:export": "bun src/viewer/build.ts && bun scripts/export-snapshot.ts",
     "prototype:ui": "bun scripts/design-prototype.ts",
     "preview:workspace": "bun src/viewer/build.ts && bun scripts/preview-workspace.ts",

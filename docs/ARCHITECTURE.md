@@ -23,6 +23,7 @@ The recommendation follows [primary-source research](research/architecture.md).
 | Memory | accept, recall, correct, retract, forget | Explicit namespace/lifecycle and retained cited spans; no automatic promotion |
 | Module map | scoped indexed code to an outline | JS/TS syntax imports/export names, limited local target lookup and coverage |
 | Catalog operations | status, backup, restore | Structural counts, consistent copy and fresh-target verified restoration |
+| Video library | import, finalize, export a bounded view | Read-only SQLite/raw reconciliation, passage conservation, ownership, optional lexical links and scoped offline views |
 | Presentation | render a versioned snapshot | Shared scoped projection, whole-snapshot dashboard inventory, pure placement/motion, 2D/3D camera, accessible source/evidence navigation |
 | CLI | commands and JSON records | Validate arguments, handle errors, orchestrate modules, export and loopback preview |
 
@@ -105,6 +106,12 @@ Cross-corpus research-source selection retains all research notes and citation r
 No dashboard data service, animation dependency, extension registry, database change, or new runtime is required.
 
 ## Repository structure
+
+`adapters/viberaven-library.ts` keeps full archive ingestion separate from the representative sample and the frozen viewer.
+It extends the existing catalog with media provenance and coverage tables while reusing native retrieval, chunking, QMD projection, and snapshot rendering.
+Full content stays on disk; graph exports page through at most 400 sources with their parent context.
+Lexical linking materializes corpus word frequencies into a temporary disk-backed table and bounds candidate comparison and passage degree.
+Its finalization command rebuilds derived links only after checking an already committed content import against explicit source inputs.
 
 Keep the headless domain, store, ingestion, retrieval, CLI, and actual adapters together under the existing source root.
 Keep authored viewer modules together and regenerate the browser bundle through the project runner.

@@ -1,6 +1,7 @@
 # Local issue tracker
 
-This workspace uses local Markdown because no remote issue tracker or Git repository is configured.
+This workspace uses local Markdown for implementation planning alongside the GitHub repository.
+No remote issue tracker integration is configured.
 No ticket in this workspace implies that a GitHub or Linear issue was published.
 
 Implementation tickets live in `.scratch/<feature>/issues/`, one file per tracer bullet, with descriptive titles, explicit blockers, status, and observable acceptance criteria.

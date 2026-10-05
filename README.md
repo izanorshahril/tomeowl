@@ -29,9 +29,9 @@ src/
   cli.ts             JSON commands and loopback preview
   cli-guards.ts      Read-only and projection output guards
   graphify-validation.ts  Bounded validation against current source revisions
-  adapters/          qmd projection and Graphify provenance validation
+  adapters/          Video archives, qmd projection, Graphify provenance validation
   viewer/            Shared projection, pure placement/motion, camera, dashboard, evidence UI, offline export
-scripts/             Explicit bounded local sample and evaluation recipes
+scripts/             Local corpus imports, bounded samples, evaluation recipes
 tests/               Behavioral tests and small cited fixtures
 docs/                Current decisions, specification, research, verification
   drafts/            Proposed future capability requirements
@@ -191,3 +191,16 @@ It records frozen corpora, version pins, raw timings and limits; no model or ren
 
 The [Viberaven graph recipe](docs/VIDEO-GRAPH.md) builds channel → video → description/transcript passages with directed ownership, timestamped evidence, and labelled text-overlap links.
 Run `bun run sample:videos --root D:/Dev/viberaven/transcripts --out data/viberaven-demo-002 --channels 4 --videos-per-channel 2` to create a new offline catalog, enriched snapshot, HTML viewer, and optional QMD Markdown projection.
+
+For the complete SQLite archive, use the [full-library recipe](docs/VIDEO-GRAPH.md#full-library-from-sqlite).
+It indexes every admitted video into a disk-backed catalog, reconciles raw descriptions and transcripts, and exports bounded views through the same viewer.
+
+```powershell
+bun run library:videos import --database D:/Dev/viberaven/transcripts/manifest.sqlite3 --root D:/Dev/viberaven/transcripts --out data/viberaven-library-001
+bun src/cli.ts search --db data/viberaven-library-001/videos.sqlite --query embeddings --limit 5
+bun run library:videos export --database data/viberaven-library-001/videos.sqlite --out data/viberaven-library-view-001 --video-id nX0fgBL3sIM
+```
+
+The full catalog and coverage report remain separate from the bounded graph view.
+The media import/export recipes require Bun; the compiled executable can search and retrieve their generated catalog.
+No QMD, Graphify, embedding model, or service is required.

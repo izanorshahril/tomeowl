@@ -2,23 +2,24 @@ import { hash, TomeowlError, type Locator, type Relation } from "../domain";
 
 export const MEDIA_CHUNK_CHARS = 3600;
 export const MEDIA_OVERLAP_CHARS = 540;
-export type MediaPassage = { text: string; locator: Locator; cueStart?: number; cueEnd?: number; charStart?: number; charEnd?: number };
+export type MediaPassage = { text: string; locator: Locator; cueStart?: number; cueEnd?: number; cueSpans?: Array<{ ordinal: number; start: number; end: number; charStart: number; charEnd: number }>; charStart?: number; charEnd?: number };
 export type CaptionCue = { text: string; start: number; end: number; ordinal: number };
 export type ArchivedVideo = {
   id: string; title: string; channel: string; channelUrl: string; url: string;
   description: string; cues: CaptionCue[]; language: string; isGenerated?: boolean;
+  descriptionPresent: boolean;
   publishedAt?: string; originalPath: string; rawSha256: string;
 };
 
 /** Validate supplied local artifacts; never repair or fetch caption text. */
-export function parseArchivedVideo(text: string, expectedId: string, originalPath: string): ArchivedVideo {
+export function parseArchivedVideo(text: string, expectedId: string, originalPath: string, maxCues = 20_000): ArchivedVideo {
   let value: any;
   try { value = JSON.parse(text); } catch { throw new TomeowlError("Invalid transcript JSON", "INVALID_TRANSCRIPT"); }
   if (!value || value.video_id !== expectedId || !/^[\w-]{11}$/.test(expectedId)
     || typeof value.title !== "string" || !value.title.trim()
     || typeof value.author_name !== "string" || !value.author_name.trim()
     || typeof value.author_url !== "string" || !Array.isArray(value.snippets)
-    || !value.snippets.length || value.snippets.length > 20000) {
+    || !value.snippets.length || value.snippets.length > maxCues) {
     throw new TomeowlError(`Invalid video identity/metadata: ${expectedId}`, "INVALID_TRANSCRIPT");
   }
   let channelUrl: URL;
@@ -40,7 +41,7 @@ export function parseArchivedVideo(text: string, expectedId: string, originalPat
   if (value.total_snippets !== undefined && value.total_snippets !== cues.length) throw new TomeowlError("Caption count mismatch", "INVALID_TRANSCRIPT");
   return {
     id: expectedId, title: value.title.trim(), channel: value.author_name.trim(), channelUrl: channelUrl.href,
-    url: `https://www.youtube.com/watch?v=${expectedId}`, description: typeof value.description === "string" ? value.description : "",
+    url: `https://www.youtube.com/watch?v=${expectedId}`, description: typeof value.description === "string" ? value.description : "", descriptionPresent: typeof value.description === "string",
     cues, language: typeof value.language_code === "string" ? value.language_code : "unknown", isGenerated: typeof value.is_generated === "boolean" ? value.is_generated : undefined,
     ...(typeof value.published_at === "string" ? { publishedAt: value.published_at } : {}), originalPath, rawSha256: hash(text),
   };
@@ -73,10 +74,10 @@ export function descriptionPassages(text: string): MediaPassage[] {
 /** Cue boundaries win over exact overlap; oversized cues keep their original timestamp and ordinal. */
 export function transcriptPassages(cues: readonly CaptionCue[]): MediaPassage[] {
   const pieces = cues.flatMap(cue => {
-    const result: CaptionCue[] = [];
+    const result: Array<CaptionCue & { charStart: number; charEnd: number }> = [];
     for (let offset = 0; offset < cue.text.length;) {
       const end = safeBoundary(cue.text, Math.min(cue.text.length, offset + MEDIA_CHUNK_CHARS));
-      result.push({ ...cue, text: cue.text.slice(offset, end) }); offset = end;
+      result.push({ ...cue, text: cue.text.slice(offset, end), charStart: offset, charEnd: end }); offset = end;
     }
     return result;
   });
@@ -89,7 +90,8 @@ export function transcriptPassages(cues: readonly CaptionCue[]): MediaPassage[] 
     const selected = pieces.slice(start, end);
     out.push({ text: selected.map(cue => cue.text).join("\n"),
       locator: { startSeconds: selected[0]!.start, endSeconds: Math.max(...selected.map(cue => cue.end)) },
-      cueStart: selected[0]!.ordinal, cueEnd: selected.at(-1)!.ordinal });
+      cueStart: selected[0]!.ordinal, cueEnd: selected.at(-1)!.ordinal,
+      cueSpans: selected.map(cue => ({ ordinal: cue.ordinal, start: cue.start, end: cue.end, charStart: cue.charStart, charEnd: cue.charEnd })) });
     if (end === pieces.length) break;
     let next = end, overlap = 0;
     while (next > start + 1 && overlap + pieces[next - 1]!.text.length + 1 <= MEDIA_OVERLAP_CHARS) {
@@ -102,7 +104,7 @@ export function transcriptPassages(cues: readonly CaptionCue[]): MediaPassage[] 
 
 export type LexicalPassage = { id: string; videoId: string; layer: "description" | "transcript"; text: string };
 export type LexicalLink = Pick<Relation, "id" | "source" | "target" | "kind" | "basis"> & { score: number; sharedTerms: string[] };
-const STOP = new Set("the and that this with from you your for are was were have has had not but can will would could should what when where which how who they their them our about into more also just like then than there here been being some all any get got make know want one two use using used video channel subscribe subscription link links youtube com https www http follow thank thanks watch description transcript click hello yeah really please today okay right don't it's i'm we're that's let's".split(" "));
+export const MEDIA_STOP_WORDS = new Set("the and that this with from you your for are was were have has had not but can will would could should what when where which how who they their them our about into more also just like then than there here been being some all any get got make know want one two use using used video channel subscribe subscription link links youtube com https www http follow thank thanks watch description transcript click hello yeah really please today okay right don't it's i'm we're that's let's".split(" "));
 
 /** Bounded TF-IDF token overlap; scores are lexical heuristics, never embedding similarity. */
 export function lexicalPassageLinks(passages: readonly LexicalPassage[]): LexicalLink[] {
@@ -110,7 +112,7 @@ export function lexicalPassageLinks(passages: readonly LexicalPassage[]): Lexica
   const vectors = passages.map(p => {
     const terms = new Map<string, number>();
     for (const token of p.text.toLowerCase().match(/[\p{L}\p{N}_]+/gu) ?? []) {
-      if (token.length < 3 || token.length > 48 || STOP.has(token) || /^\d+$/.test(token)) continue;
+      if (token.length < 3 || token.length > 48 || MEDIA_STOP_WORDS.has(token) || /^\d+$/.test(token)) continue;
       terms.set(token, (terms.get(token) ?? 0) + 1);
     }
     return new Map([...terms].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 256));
